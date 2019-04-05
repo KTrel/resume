@@ -17,6 +17,8 @@
 \robustify\cftdotfill
 
 
+
+
 %-----------------------------------------------------------
 %Edit these values as you see fit
 
@@ -57,30 +59,43 @@
 		\textbf{#1} & #2 \\
 		\textit{#3} & \textit{#4} \\
 \end{tabular*}\vspace{-6pt}}
-%-----------------------------------------------------------
 
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{helvet}
 
 \begin{document}
 
+\begingroup
+\renewcommand{\arraystretch}{1.2}
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\textbf{\Huge Thomas Holterbach} & thomahol@ethz.ch\\[5pt]
-\large \textit{PhD Student at ETH Z{\"u}rich} & \\
+\sffamily{\textbf{\Huge Thomas Holterbach}} & \\[5pt]
+\sffamily{\large Fourth-year PhD student at ETH Z{\"u}rich} & \sffamily{\texttt{thomahol@ethz.ch}} \\
+\sffamily{\large Expected to graduate in 2020} & \sffamily{French, 27 years old}\\
+% \renewcommand{\arraystretch}{-1}
+
+
 %& born on 31 July 1991\\
 %& French \\
 %&   Last update: \textbf{\today}\\
 \end{tabular*}
+\endgroup
 \\
 
-\vspace{1cm}
+\vspace{0.5cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Research Interests}
+\vspace{-0.3cm}
 
-\begin{itemize}
-    \item Internet routing, architecture, security and measurements
-    \item Software-defined networks and programmable forwarding planes
-    \item Graphs algorithms and Machine learning
-\end{itemize}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular*}{7in}{p{0.3cm}p{11cm}p{6cm}}
+    & \\
+& \sffamily{$\bullet$~~Internet routing and architecture} & \sffamily $\bullet$~~Programmable network hardware \\
+& \sffamily $\bullet$~~Internet measurements and security & \sffamily $\bullet$~~Machine learning for networking \\
+& \sffamily $\bullet$~~Software-defined networking & \sffamily $\bullet$~~Graph algorithms \\
+\end{tabular*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -93,57 +108,44 @@
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\textbf{PhD Student in Computer Science} & 2016 -\\
-    		ETH Z{\"u}rich, Swizterland &  present\\
-    		\textit{Networked Systems Group} & \\
-    		\textit{Advised by Prof. Laurent Vanbever} & \\
-    \end{tabular*}\vspace{-6pt}
+    		\sffamily \textbf{PhD Student}, ETH Z{\"u}rich, Switzerland & \sffamily 2016 - 2020\\
+    		% \sffamily \textit{Networked Systems Group} & \\
+    		\sffamily Advised by Prof. Laurent Vanbever in the Networked Systems Group & \\
+    		\sffamily Passed the Machine Learning (8 credits) \& Data Mining (4 credits) courses in 2018 & \\
 
-	%\begin{itemize}
-
-	%	\resitem{Computer Engineering and Networks Laboratory. Networked Systems Group.}
-
-	%	\resitem{Emphasis on machine learning/data mining and algorithm design/software development related to bioinformatics and optimization}
-
-    %    \resitem{Committee: Prof. Peter Frazier (advisor), Prof. Steve Strogatz, Prof. Bart Selman, Dr. Zhong Wang}
-
-	%\end{itemize}
+    \end{tabular*}\vspace{-10pt}
 
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\textbf{Master degree in Computer Science with honors} & 2014 \\
-    	    University of Strasbourg, France & \\
-    		\textit{Specialized in Network and Embedded systems} & \\
-    		\textit{Ranked 2'/15. Grade: 15.2/20} & \\\vspace{-6pt}
+    		\sffamily \textbf{Master degree in Computer Science}, University of Strasbourg, France & \sffamily 2014 \\
+    		% \textit{Specialized in Network and Embedded systems} & \\
+    		\sffamily With honors. Ranked 2'/15. Grade: 15.2/20 & \\
             & \\
-    		Master Thesis advised by Dr. Pascal Merindol: & \\
-    		Towards Efficient Algorithms for Loop-Free Convergence in Link-State IP Networks & \\
+    		% Master Thesis advised by Dr. Pascal Merindol: & \\
+    		% Towards Efficient Algorithms for Loop-Free Convergence in Link-State IP Networks & \\
 
-    \end{tabular*}\vspace{-6pt}
-
-\item
-
-    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\textbf{Bachelor's degree in Computer Science} & 2012 \\
-    	    University of Strasbourg, France & \\
-    		\textit{Ranked 5'/50. Grade: 13.87/20} & \\
-
-    \end{tabular*}\vspace{-6pt}
+    \end{tabular*}\vspace{-25pt}
 
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\textbf{Baccalauréat with honors} (French secondary school diploma) & 2009 \\
-    	    Specialized in Science & \\
-    		\textit{Grade: 14.57/20} & \\
+    		\sffamily \textbf{Bachelor degree in Computer Science}, University of Strasbourg, France & \sffamily 2012 \\
+    		\sffamily Ranked 5'/50. Grade: 13.87/20 & \\
 
-    \end{tabular*}\vspace{-6pt}
+    \end{tabular*}\vspace{-10pt}
+
+\item
+
+    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+    		\sffamily \textbf{Baccalauréat} (French secondary school diploma) & \sffamily 2009 \\
+    	    \sffamily With honors. Grade: 14.57/20 & \\
+    \end{tabular*}\vspace{-10pt}
 
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Research Experience}
+\resheading{Professional Experience}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{itemize}[label={},leftmargin=3mm]
 \setlength\itemsep{1.5em}
@@ -151,127 +153,112 @@
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\textbf{Research and Teaching Assistant} & Feb. 2015 -\\
-    	    Institute: \textit{ETH Z{\"u}rich, Switzerland} &  present \\
-    		Group: \textit{Networked Systems Group} & \\
-            Supervisor: Prof. Laurent Vanbever & \\
+    		\sffamily \textbf{Research and Teaching Assistant}, ETH Z{\"u}rich, Switzerland & \sffamily Feb. 2015 -\\
+            \sffamily Supervised by Prof. Laurent Vanbever in the Networked Systems Group & \sffamily present\\
     \end{tabular*}\vspace{-6pt}
 
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\textbf{Junior Researcher} & June 2016 - \\
-    	    Institute: \textit{University of California San Diego, CA} & Dec. 2016\\
-    		Group: \textit{Center for Applied Internet Data Analysis} & \\
-            Supervisor: Dr. Alberto Dainotti & \\
+    		\sffamily \textbf{Visiting Student}, University College London, UK  & \sffamily May 2018 - \\
+            \sffamily Supervised by Dr. Stefano Vissicchio in the Department of Computer Science & \sffamily July 2018\\
     \end{tabular*}\vspace{-6pt}
 
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\textbf{Research Intern} & June 2014 - \\
-    	    Institute: \textit{Internet Initiative Japan Innovation Institute, Tokyo, Japan} & Dec. 2014\\
-    		Supervisors: Prof. Cristel Pelsser and Randy Bush & \\
+    		\sffamily \textbf{Junior Researcher}, University of California San Diego, CA, USA & \sffamily June 2016 - \\
+            \sffamily Supervised by Dr. Alberto Dainotti in the Center for Applied Internet Data Analysis & \sffamily Dec. 2016\\
     \end{tabular*}\vspace{-6pt}
 
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\textbf{Research Intern} & Jan. 14 - \\
-    	    Institute: \textit{University of Strasbourg, France} & July 2014\\
-            Group: \textit{ICube laboratory} & \\
-    		Supervisor: Dr. Pascal Merindol & \\
+    		\sffamily \textbf{Research Intern}, Internet Initiative Japan, Tokyo, Japan & \sffamily June 2014 - \\
+    		\sffamily Supervised by Prof. Cristel Pelsser and Randy Bush & \sffamily Dec. 2014\\
+    \end{tabular*}\vspace{-6pt}
+
+\item
+
+    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+    		\sffamily \textbf{Research Intern}, University of Strasbourg, France & \sffamily  June 2013 - Aug. 2013 \\
+    		\sffamily Supervised by Dr. Pascal Merindol in the ICube laboratory & \sffamily \& Jan. 2014 - July 2014\\
     \end{tabular*}\vspace{-6pt}
 
 \end{itemize}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Skills}
 
-\begin{itemize}[label={},leftmargin=3mm]
-\setlength\itemsep{1.5em}
-
-\item \large \textbf{Computer Science:} \normalsize
-
-\item
-
-\begin{tabular}{p{4cm}p{12.5cm}}
-  Strong Skills & Network protocols and tools, Internet architecture, SDN,
-  C and Python programming, UNIX systems \\[5pt]
-
-  Protocols & STP, IP, BGP, OSPF, MPLS, TCP, NetFlow  \\[5pt]
-
-  Languages & C, Python, Java, Bash, P4, etc  \\[5pt]
-
-  Tools & GNS3, Quagga, BIRD, Openvswitch, Mininet, Virtualbox, Scamper, BGPStream, RIPE Atlas  \\[5pt]
-
-  Extra & Cisco iOS, Graph algorithms, Network security, Machine learning,
-  Distributed systems, Wireless sensor network, Parallel programming, Compilations skills
-
-\end{tabular}
-
-\item \large \textbf{Languages:} \normalsize
-
-\item
-
-\begin{tabular}{p{4cm}p{12.5cm}}
-  French & Mother tongue \\[5pt]
-  English & Fluent \\[5pt]
-  German & Beginner
-\end{tabular}
-
-\end{itemize}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Publications}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\vspace{-0.2cm}
+
+
+\sffamily
+
 \begin{itemize}[label={},leftmargin=3mm]
-\setlength\itemsep{1.5em}
+\setlength\itemsep{1em}
 
 %\item \large \textbf{Conference papers:} \normalsize
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{SWIFT: Predictive Fast Reroute} & \\
-	    Thomas Holterbach, Stefano Vissicchio, Alberto Dainotti, Laurent Vanbever & \\
-		\textit{ACM SIGCOMM 2017, Los Angeles, CA, USA} & \\
+		\textbf{Blink: Fast Connectivity Recovery Entirely in the Data Plane} in NSDI 2019  & \\
+	    \underline{T. Holterbach}, E. Costa Molero, M. Apostolaki, S. Vissicchio, A. Dainotti and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Boosting the BGP convergence in SDXes with SWIFT} & \\
-	    Philipp Mao, Rüdiger Birkner, Thomas Holterbach, Laurent Vanbever & \\
-		\textit{ACM SIGCOMM 2017, Los Angeles, CA, USA (Demo)} & \\
+		\textbf{SWIFT: Predictive Fast Reroute} in SIGCOMM 2017 & \\
+	    \underline{T. Holterbach}, S. Vissicchio, A. Dainotti and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Measurement Vantage Point Selection Using A Similarity Metric} & \\
-	    Thomas Holterbach, Emile Aben, Cristel Pelsser, Randy Bush, Laurent Vanbever & \\
-		\textit{ACM, IRTF \& ISOC Applied Networking Research Workshop. Prague, Czech Republic (July 2017)} & \\
-\end{tabular*}\vspace{-6pt}
-
-\item
-
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Quantifying Interferences Between Measurements on the RIPE Atlas Platform} & \\
-	    Thomas Holterbach, Cristel Pelsser, Randy Bush, Laurent Vanbever & \\
-		\textit{ACM IMC 2015, Tokyo, Japan} & \\
+		\textbf{Quantifying Interferences Between Measurements on the RIPE Atlas Platform} in IMC 2015 & \\
+	    \underline{T. Holterbach}, C. Pelsser, R. Bush and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 \vspace{6pt}
 
+\end{itemize}
+
+\vspace{-0.6cm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Workshop paper, poster and demo}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}[label={},leftmargin=3mm]
+\setlength\itemsep{1em}
+
+\vspace{-0.2cm}
+
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Supercharge me: Boost Router Convergence with SDN} & \\
-	    Michael Alan Chang, Thomas Holterbach, Markus Happe, Laurent Vanbever & \\
-		\textit{ACM SIGCOMM 2015, London, UK (Poster)} & \\
+		\textbf{Boosting the BGP convergence in SDXes with SWIFT}, in SIGCOMM 2017 & \\
+	    P. Mao, R. Birkner, \underline{T. Holterbach} and Laurent Vanbever & \\
+\end{tabular*}\vspace{-6pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{Measurement Vantage Point Selection Using A Similarity Metric} in IRTF \& ISOC ANRW & \\
+	    \underline{T. Holterbach}, E. Aben, C. Pelsser, R. Bush, L. Vanbever & \\
+\end{tabular*}\vspace{-6pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{Supercharge me: Boost Router Convergence with SDN}, in SIGCOMM 2015 & \\
+	    M. Alan Chang, \underline{T. Holterbach}, M. Happe, L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 %\item \large \textbf{Workshop papers, posters and demos:} \normalsize
 
@@ -282,121 +269,217 @@
 
 
 \end{itemize}
-
+\vspace{-0.5cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Teaching}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}[label={},leftmargin=3mm]
-\setlength\itemsep{1.5em}
+% \setlength\itemsep{0.3em}
+
+\vspace{-0.3cm}
+
+\item \sffamily \large \textbf{Lectures:} \normalsize
+\vspace{0.1cm}
+
+\item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		Communication Networks & 2016, 2017, 2018 and 2019\\
+		ETH Z{\"u}rich, with Prof. Laurent Vanbever &\\
+\end{tabular*}\vspace{-6pt}
+
+\vspace{0.1cm}
+
+\item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		Advanced Topics in Communication Networks & 2018\\
+		ETH Z{\"u}rich, with Prof. Laurent Vanbever &\\
+\end{tabular*}\vspace{-6pt}
+
+\vspace{0.3cm}
+
+\item \large \textbf{Students supervision:} \normalsize
+\vspace{0.1cm}
 
 \item
 
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Communication Networks} & 2016 and 2017\\
-		\textit{ETH Z{\"u}rich, with Prof. Laurent Vanbever} &\\
-\end{tabular*}\vspace{-6pt}
+2 Master thesis (6 months) and 7 Semester thesis (3 months) supervised
+at ETH Z{\"u}rich
+
+
+\vspace{-0.5cm}
 
 \end{itemize}
 
 
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \resheading{Students}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% \begin{itemize}[label={},leftmargin=3mm]
+% \setlength\itemsep{1.5em}
+%
+% \item
+%
+% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+% 		\textbf{Fabian Schleiss (Master thesis)} & \textit{in progress}\\
+% 		Data-plane Driven Fast Network Convergence & \\
+% 		\textit{ETH Z{\"u}rich, co-advised with Edgar Costa Molero and Prof. Laurent Vanbever} & \\
+% \end{tabular*}\vspace{-6pt}
+%
+% \item
+%
+% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+% 		\textbf{Simon Miescher (Semester thesis)} & 2017\\
+% 		A Fast and Loop-Free Convergence upon Remote BGP Disruptions in Large IP Networks & \\
+% 		\textit{ETH Z{\"u}rich, co-advised with Prof. Laurent Vanbever} & \\
+% \end{tabular*}\vspace{-6pt}
+%
+% \item
+%
+% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+% 		\textbf{Edgar Costa Molero (Master thesis)} & 2016\\
+% 		Improving Load-Balancing Decisions in Data Center Networks Using SDN & \\
+% 		\textit{ETH Z{\"u}rich, co-advised with Prof. Laurent Vanbever} & \\
+% \end{tabular*}\vspace{-6pt}
+%
+% \item
+%
+% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+% 		\textbf{Sol\`{e}ne Buet (Semester thesis)} & 2016\\
+% 		On Leveraging Machine Learning techniques to predict
+%         the extent of Internet failures & \\
+% 		\textit{ETH Z{\"u}rich, co-advised with Prof. Laurent Vanbever} & \\
+% \end{tabular*}\vspace{-6pt}
+%
+% \item
+%
+% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+% 		\textbf{Edgar Costa Molero (Semester thesis)} & 2015\\
+% 		Improving Load-Balancing Decisions in IP Networks Using SDN & \\
+% 		\textit{ETH Z{\"u}rich, co-advised with Prof. Laurent Vanbever} & \\
+% \end{tabular*}\vspace{-6pt}
+%
+% \item
+%
+% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+% 		\textbf{Roman May (Semester thesis)} & 2015\\
+% 		Supercharging IP router memory with SDN & \\
+% 		\textit{ETH Z{\"u}rich, co-advised with Prof. Laurent Vanbever} & \\
+% \end{tabular*}\vspace{-6pt}
+%
+% \end{itemize}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Students}
+\resheading{Activities and Services}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
 
 \begin{itemize}[label={},leftmargin=3mm]
-\setlength\itemsep{1.5em}
+\setlength\itemsep{1em}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Fabian Schleiss (Master thesis)} & \textit{in progress}\\
-		Data-plane Driven Fast Network Convergence & \\
-		\textit{ETH Z{\"u}rich, co-advised with Edgar Costa Molero and Prof. Laurent Vanbever} & \\
-\end{tabular*}\vspace{-6pt}
+		\textbf{Occasional Reviewer} for IEEE/ACM ToN and ACM CCR \\
+\end{tabular*}\vspace{-10pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Simon Miescher (Semester thesis)} & 2017\\
-		A Fast and Loop-Free Convergence upon Remote BGP Disruptions in Large IP Networks & \\
-		\textit{ETH Z{\"u}rich, co-advised with Prof. Laurent Vanbever} & \\
-\end{tabular*}\vspace{-6pt}
+		\textbf{CAIDA BGP Hackathon}, San Diego, CA, USA (travel granted) & Feb. 2016\\
+\end{tabular*}\vspace{-10pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Edgar Costa Molero (Master thesis)} & 2016\\
-		Improving Load-Balancing Decisions in Data Center Networks Using SDN & \\
-		\textit{ETH Z{\"u}rich, co-advised with Prof. Laurent Vanbever} & \\
-\end{tabular*}\vspace{-6pt}
+		\textbf{PhD School on Software-defined Networks}, Heracklion, Greece & July 2015\\
+\end{tabular*}\vspace{-10pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Sol\`{e}ne Buet (Semester thesis)} & 2016\\
-		On Leveraging Machine Learning techniques to predict
-        the extent of Internet failures & \\
-		\textit{ETH Z{\"u}rich, co-advised with Prof. Laurent Vanbever} & \\
-\end{tabular*}\vspace{-6pt}
+		\textbf{PhD School on Traffic Monitoring and Analysis}, Barcelona, Spain (travel granted) & April 2015\\
+\end{tabular*}\vspace{-10pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Edgar Costa Molero (Semester thesis)} & 2015\\
-		Improving Load-Balancing Decisions in IP Networks Using SDN & \\
-		\textit{ETH Z{\"u}rich, co-advised with Prof. Laurent Vanbever} & \\
-\end{tabular*}\vspace{-6pt}
-
-\item
-
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Roman May (Semester thesis)} & 2015\\
-		Supercharging IP router memory with SDN & \\
-		\textit{ETH Z{\"u}rich, co-advised with Prof. Laurent Vanbever} & \\
-\end{tabular*}\vspace{-6pt}
+		\textbf{RIPE Atlas Hackathon}, Amsterdam, Netherlands, (travel granted) & March 2015\\
+\end{tabular*}\vspace{-10pt}
 
 \end{itemize}
 
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Events}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
 
 \begin{itemize}[label={},leftmargin=3mm]
-\setlength\itemsep{1.5em}
+% \setlength\itemsep{0.3em}
+\vspace{-0.3cm}
+
+\item \sffamily \large \textbf{Computer Networks:} \normalsize
+\vspace{0.1cm}
 
 \item
 
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{CAIDA BGP Hackathon} & Feb. 2016\\
-		\textit{San Diego, CA, USA} & \\
-		Travel granted & \\
-\end{tabular*}\vspace{-6pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{4cm}p{12.5cm}}
+  Strong Skills & Network protocols and tools, Internet architecture, Software-defined
+  networking, Programmable data planes (P4)  \\[5pt]
+
+  Protocols & STP, IP, BGP, OSPF, MPLS, TCP, OpenFlow, NetFlow, etc  \\[5pt]
+
+  Tools & Quagga/BIRD, Openvswitch, BGPStream, RIPE Atlas, netfilter, etc  \\[5pt]
+
+  Extra & Cisco iOS, Graph algorithms, Network security, Wireless sensor network
+
+\end{tabular}
+\vspace{-0.3cm}
+
+\item \sffamily \large \textbf{Computer Science:} \normalsize
+\vspace{0.1cm}
 
 \item
 
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{PhD School on Software-defined Networks} & July 2015\\
-		\textit{Heracklion, Greece} & \\
-\end{tabular*}\vspace{-6pt}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{4cm}p{12.5cm}}
+  Strong Skills & Python and C programming, UNIX systems, Algorithms design \\[5pt]
+
+  Languages & C, Python, Java, Bash, R, etc \\[5pt]
+
+  Tools & Virtualbox/KVM, Docker, Vagrant, Valgrind, Git, etc \\[5pt]
+
+  Extra & Machine learning, Data Mining, Distributed systems, Hardware programming (FPGA), Parallel programming, Compilation
+
+\end{tabular}
+
+
+
+
+
+\vspace{-0.4cm}
+
+\item \large \textbf{Communication:} \normalsize
+\vspace{0.1cm}
 
 \item
 
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{PhD School on Traffic Monitoring and Analysis} & April 2015\\
-		\textit{Barcelona, Spain} & \\
-        Travel granted & \\
-\end{tabular*}\vspace{-6pt}
+\begin{tabular}{p{4cm}p{12.5cm}}
+  French & Mother tongue \\[5pt]
+  English & 5+ years of experience in writing, presenting and teaching \\[5pt]
+\end{tabular}
 
-\item
-
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{RIPE Atlas Hackathon} & March 2015\\
-		\textit{Amsterdam, Netherlands} & \\
-        Travel granted & \\
-\end{tabular*}\vspace{-6pt}
+\vspace{-0.5cm}
 
 \end{itemize}
+
+\vspace{-0.2cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 \end{document}
