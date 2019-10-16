@@ -14,6 +14,11 @@
 \usepackage{tocloft}
 \usepackage{etoolbox}
 \usepackage{enumitem}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{marvosym}
+\newcommand\fboxpic{\fcolorbox{lightgray}{white}}
+
 \robustify\cftdotfill
 
 
@@ -69,10 +74,17 @@
 
 \begingroup
 \renewcommand{\arraystretch}{1.2}
-\begin{tabular*}{7in}{l@{\extracolsep{\fill}}r}
-\sffamily{\textbf{\Huge Thomas Holterbach}} & \\[5pt]
-\sffamily{\large Fourth-year PhD student at ETH Z{\"u}rich} & \sffamily{\texttt{thomahol@ethz.ch}} \\
-\sffamily{\large Expected to graduate in 2020} & \sffamily{French, 28 years old}\\
+\begin{tabular*}{7in}{l@{\extracolsep{\fill}}rr}
+\sffamily{\textbf{\Huge Thomas Holterbach}} & & \multirow{6}{*}{\fboxpic{\includegraphics[width=3.5cm]{thomas_picture_zoom2.jpg}}} \\[5pt]
+\sffamily{\large PhD Student at ETH Z{\"u}rich} & &   \\
+&  & \\
+&  & \\
+&  & \\
+& \sffamily{ \sffamily{\Letter~~\texttt{thomahol@ethz.ch}}} & \\
+& \sffamily{ \sffamily{French, 28 years old}} &
+
+% \sffamily{\sffamily{French, 28 years old} & \\
+
 % \renewcommand{\arraystretch}{-1}
 
 
@@ -83,18 +95,18 @@
 \endgroup
 \\
 
-\vspace{0.5cm}
+\vspace{0.2cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Research Interests}
 \vspace{-0.3cm}
 
 \renewcommand{\arraystretch}{1.2}
-\begin{tabular*}{7in}{p{0.3cm}p{11cm}p{6cm}}
+\begin{tabular*}{7in}{p{0.3cm}p{10cm}p{8cm}}
     & \\
-& \sffamily{$\bullet$~~Internet routing and architecture} & \sffamily $\bullet$~~Programmable network hardware \\
-& \sffamily $\bullet$~~Internet measurements and security & \sffamily $\bullet$~~Machine learning for networking \\
-& \sffamily $\bullet$~~Software-defined networking & \sffamily $\bullet$~~Graph algorithms \\
+& \sffamily{$\bullet$~~Internet routing, architecture and security} & \sffamily $\bullet$~~Programmable network hardware \\
+& \sffamily $\bullet$~~Network traffic measurement and analysis & \sffamily $\bullet$~~Artificial intelligence for networking \\
+& \sffamily $\bullet$~~Software-defined networking & \sffamily $\bullet$~~Algorithm design and optimisation \\
 \end{tabular*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -111,7 +123,7 @@
     		\sffamily \textbf{PhD Student}, ETH Z{\"u}rich, Switzerland & \sffamily 2016 - 2020\\
     		% \sffamily \textit{Networked Systems Group} & \\
     		\sffamily Advised by Prof. Laurent Vanbever in the Networked Systems Group & \\
-    		\sffamily Passed the Machine Learning (8 credits) \& Data Mining (4 credits) courses in 2018 & \\
+    		\sffamily $\bullet$~~Passed the Machine Learning (8 credits) \& Data Mining (4 credits) courses in 2018 & \\
 
     \end{tabular*}\vspace{-10pt}
 
@@ -232,7 +244,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Workshop paper, poster and demo}
+\resheading{Workshop papers, posters and demos}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}[label={},leftmargin=3mm]
@@ -243,8 +255,15 @@
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{(Self) Driving Under the Influence}, in HotNets 2019 & \\
+	    R. Meier, \underline{T. Holterbach}, S. Keck, M. Stähli, V. Lenders, A. Singla and L. Vanbever & \\
+\end{tabular*}\vspace{-6pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{Boosting the BGP convergence in SDXes with SWIFT}, in SIGCOMM 2017 & \\
-	    P. Mao, R. Birkner, \underline{T. Holterbach} and Laurent Vanbever & \\
+	    P. Mao, R. Birkner, \underline{T. Holterbach} and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
@@ -378,6 +397,8 @@ at ETH Z{\"u}rich
 %
 % \end{itemize}
 
+\newpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Activities and Services}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -443,9 +464,9 @@ at ETH Z{\"u}rich
   Strong Skills & Network protocols and tools, Internet architecture, Software-defined
   networking, Programmable data planes (P4)  \\[5pt]
 
-  Protocols & STP, IP, BGP, OSPF, MPLS, TCP, OpenFlow, NetFlow, etc  \\[5pt]
+  Protocols & STP, IP, BGP, OSPF, MPLS, TCP, DNS, OpenFlow, NetFlow, etc  \\[5pt]
 
-  Tools & Quagga/BIRD, Openvswitch, BGPStream, RIPE Atlas, netfilter, etc  \\[5pt]
+  Tools & Quagga/BIRD, Openvswitch, RIPE Atlas, BGPStream, Tcpdump, Netfilter, OpenVPN, etc  \\[5pt]
 
   Extra & Cisco iOS, Graph algorithms, Network security, Wireless sensor network
 
@@ -459,9 +480,9 @@ at ETH Z{\"u}rich
 
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular}{p{4cm}p{12.5cm}}
-  Strong Skills & Python and C programming, UNIX systems, Algorithms design \\[5pt]
+  Strong Skills & Python and C programming, UNIX systems, Algorithm design \\[5pt]
 
-  Languages & C, Python, Java, Bash, R, etc \\[5pt]
+  Languages & C, Python, Java, Bash, R, SQL, etc \\[5pt]
 
   Tools & Virtualbox/KVM, Docker, Vagrant, Valgrind, Git, etc \\[5pt]
 
