@@ -17,6 +17,7 @@
 \usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{marvosym}
+\usepackage{fontawesome}
 \newcommand\fboxpic{\fcolorbox{lightgray}{white}}
 
 \robustify\cftdotfill
@@ -28,8 +29,8 @@
 %Edit these values as you see fit
 
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
-\definecolor{shadecolor}{gray}{0.75}  % Outer background color of title bars (0 = black, 1 = white)
-\definecolor{shadecolorB}{gray}{0.93}  % Inner background color of title bars
+\definecolor{shadecolor}{gray}{0.85}  % Outer background color of title bars (0 = black, 1 = white)
+\definecolor{shadecolorB}{gray}{0.97}  % Inner background color of title bars
 
 
 %-----------------------------------------------------------
@@ -79,9 +80,10 @@
 \sffamily{\large PhD Student at ETH Z{\"u}rich} & &   \\
 &  & \\
 &  & \\
+&  & \\
 & \sffamily{ \sffamily{\Letter~~\small \textcolor{darkgray}{\textit{thomahol@ethz.ch}}}} & \\
-& \sffamily{ \sffamily{\Large \ComputerMouse \small~~\textcolor{darkgray}{\textit{thomasholterbach.eu}}}} & \\
-& \sffamily{ \sffamily{\small \textcolor{darkgray}{\textit{French, 28 years old}}}} &
+% & \sffamily{ \sffamily{\Large \ComputerMouse \small~~\textcolor{darkgray}{\textit{thomasholterbach.eu}}}} & \\
+& \sffamily{ \sffamily{\small \textcolor{darkgray}{\textit{French, 29 years old}}}} &
 % \sffamily{\sffamily{French, 28 years old} & \\
 
 % \renewcommand{\arraystretch}{-1}
@@ -104,7 +106,7 @@
 \begin{tabular*}{7in}{p{0.3cm}p{10cm}p{8cm}}
     & \\
 & \sffamily{$\bullet$~~Internet routing, architecture and security} & \sffamily $\bullet$~~Programmable network hardware \\
-& \sffamily $\bullet$~~Network traffic measurement and analysis & \sffamily $\bullet$~~Artificial intelligence for networking \\
+& \sffamily $\bullet$~~Network traffic measurements and analysis & \sffamily $\bullet$~~Artificial intelligence for networking \\
 & \sffamily $\bullet$~~Software-defined networking & \sffamily $\bullet$~~Algorithm design and optimisation \\
 \end{tabular*}
 
@@ -119,18 +121,18 @@
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\sffamily \textbf{PhD Student}, ETH Z{\"u}rich, Switzerland & \sffamily 2016 - 2020\\
+    		\sffamily \textbf{PhD Student}, ETH Z{\"u}rich, Switzerland & \sffamily Jan. 2016 -\\
     		% \sffamily \textit{Networked Systems Group} & \\
-    		\sffamily Advised by Prof. Laurent Vanbever in the Networked Systems Group & \\
-    		\sffamily $\bullet$~~Passed the Machine Learning (8 credits) \& Data Mining (4 credits) courses in 2018 & \\
+    		\sffamily Advised by Prof. Laurent Vanbever in the Networked Systems Group & \sffamily now\\
+    		\sffamily $\bullet$~~Passed the Machine Learning (8 credits) \& Data Mining (4 credits) courses & \\
 
     \end{tabular*}\vspace{-10pt}
 
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\sffamily \textbf{Master degree in Computer Science}, University of Strasbourg, France & \sffamily 2014 \\
-    		\sffamily{Specialized in Networks and Embedded systems} & \\
+    		\sffamily \textbf{Master degree in Computer Science}, University of Strasbourg, France & \sffamily Sept. 2012 - \\
+    		\sffamily{Specialized in Networks and Embedded systems} & \sffamily June 2014\\
     		\sffamily With honors. Ranked 2'/15. Grade: 15.2/20 & \\
             & \\
     		% Master Thesis advised by Dr. Pascal Merindol: & \\
@@ -141,15 +143,15 @@
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\sffamily \textbf{Bachelor degree in Computer Science}, University of Strasbourg, France & \sffamily 2012 \\
-    		\sffamily Ranked 5'/50. Grade: 13.87/20 & \\
+    		\sffamily \textbf{Bachelor degree in Computer Science}, University of Strasbourg, France & \sffamily Sept. 2009 -\\
+    		\sffamily Ranked 5'/50. Grade: 13.87/20 & \sffamily June 2012\\
 
     \end{tabular*}\vspace{-10pt}
 
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\sffamily \textbf{Baccalauréat} (French secondary school diploma) & \sffamily 2009 \\
+    		\sffamily \textbf{Baccalauréat} (French secondary school diploma) & \sffamily July 2009 \\
     	    \sffamily With honors. Grade: 14.57/20 & \\
     \end{tabular*}\vspace{-10pt}
 
@@ -166,8 +168,10 @@
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
     		\sffamily \textbf{Research and Teaching Assistant}, ETH Z{\"u}rich, Switzerland & \sffamily Feb. 2015 -\\
             \sffamily Supervised by Prof. Laurent Vanbever in the Networked Systems Group & \sffamily present\\
-    		\sffamily $\bullet$~~I researched how to improve the Internet convergence upon failures  & \\
-    		\sffamily $\bullet$~~I developed a "mini-Internet" project used to teach how the Internet works  & \\
+    		\sffamily $\bullet$~~I developed a framework to improve the Internet convergence upon failures.  & \\
+	        \sffamily ~~~~Published in [2,3,6,8], see \textit{blink.ethz.ch} and \textit{swift.ethz.ch} for further information.  & \\
+    		\sffamily $\bullet$~~I developed a "mini-Internet" platform to give students hands on experience  & \\
+    		\sffamily ~~~~on real routers configuration.  We published the platform in [1].& \\
 
     \end{tabular*}\vspace{-6pt}
 
@@ -176,7 +180,8 @@
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
     		\sffamily \textbf{Visiting Student}, University College London, UK  & \sffamily May 2018 - \\
             \sffamily Supervised by Dr. Stefano Vissicchio in the Department of Computer Science & \sffamily July 2018\\
-    		\sffamily $\bullet$~~I developed a P4 program to detect Internet failures in the data plane  & \\
+    		\sffamily $\bullet$~~I developed a P4 program to detect Internet failures in the data plane.  & \\
+    		\sffamily ~~~~The program is used in [2], and publicly available at \textit{github.com/nsg-ethz/Blink}. & \\
     \end{tabular*}\vspace{-6pt}
 
 \item
@@ -184,7 +189,9 @@
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
     		\sffamily \textbf{Junior Researcher}, University of California San Diego, CA, USA & \sffamily June 2016 - \\
             \sffamily Supervised by Dr. Alberto Dainotti in the Center for Applied Internet Data Analysis & \sffamily Dec. 2016\\
-    		\sffamily $\bullet$~~I used BGP data to study the Internet convergence time upon failures  & \\
+    		\sffamily $\bullet$~~I measured the Internet convergence time upon failures using & \\
+    		\sffamily ~~~~real BGP data as well as a simulator. Results are used in [3].  & \\
+
     \end{tabular*}\vspace{-6pt}
 
 \item
@@ -192,7 +199,8 @@
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
     		\sffamily \textbf{Research Intern}, Internet Initiative Japan, Tokyo, Japan & \sffamily June 2014 - \\
     		\sffamily Supervised by Prof. Cristel Pelsser and Randy Bush & \sffamily Dec. 2014\\
-    		\sffamily $\bullet$~~I studied how accurate are Internet measurement platforms such as RIPE Atlas  & \\
+    		\sffamily $\bullet$~~I studied how accurate are Internet measurement platforms  & \\
+    		\sffamily ~~~~such as RIPE Atlas, and we published the work in [4] and [7].  & \\
     \end{tabular*}\vspace{-6pt}
 
 \item
@@ -200,13 +208,79 @@
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
     		\sffamily \textbf{Research Intern}, University of Strasbourg, France & \sffamily  June 2013 - Aug. 2013 \\
     		\sffamily Supervised by Dr. Pascal Merindol in the ICube laboratory & \sffamily \& Jan. 2014 - July 2014\\
-    		\sffamily $\bullet$~~I optimized algorithms designed to prevent forwarding loops  & \\
+    		\sffamily $\bullet$~~I optimized algorithms designed to prevent forwarding loops. & \\
+    		 \multicolumn{2}{l}{\sffamily ~~~~Results are presented in my Master thesis: \small \textit{dropbox.com/s/fuvamzi5sv1hawq/Mthesis.pdf}.} \\
     \end{tabular*}\vspace{-6pt}
 
 \end{itemize}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Skills}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{itemize}[label={},leftmargin=3mm]
+% \setlength\itemsep{0.3em}
+\vspace{-0.3cm}
+
+\item \sffamily \large \textbf{Computer Networks:} \normalsize
+\vspace{0.1cm}
+
+\item
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{4cm}p{12.5cm}}
+  Strong Skills & Network protocols and tools, Internet architecture, Software-defined
+  networking, Programmable data planes (P4)  \\[5pt]
+
+  Protocols & STP, IP, BGP, OSPF, MPLS, TCP, DNS, OpenFlow, NetFlow, etc  \\[5pt]
+
+  Tools & Quagga/BIRD, Openvswitch, RIPE Atlas, BGPStream, Tcpdump, Netfilter, OpenVPN, etc  \\[5pt]
+
+  Extra & Cisco iOS, Graph algorithms, Network security, Wireless sensor network
+
+\end{tabular}
+\vspace{-0.3cm}
+
+\item \sffamily \large \textbf{Computer Science:} \normalsize
+\vspace{0.1cm}
+
+\item
+
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{p{4cm}p{12.5cm}}
+  Strong Skills & Python and C programming, UNIX systems, Algorithm design \\[5pt]
+
+  Languages & C, Python, Java, Bash, R, SQL, etc \\[5pt]
+
+  Tools & Virtualbox/KVM, Docker, Vagrant, Valgrind, Git, etc \\[5pt]
+
+  Extra & Machine learning, Data Mining, Distributed systems, Hardware programming, Parallel programming, Compilation, Probability and Statistics
+
+\end{tabular}
 
 
+
+
+
+\vspace{-0.4cm}
+
+\item \large \textbf{Languages:} \normalsize
+\vspace{0.1cm}
+
+\item
+
+\begin{tabular}{p{4cm}p{12.5cm}}
+  French & Mother tongue \\[5pt]
+  English & 5+ years of experience in writing, presenting and teaching \\[5pt]
+\end{tabular}
+
+\vspace{-0.5cm}
+
+\end{itemize}
+
+\vspace{-0.2cm}
+
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Publications}
@@ -225,23 +299,32 @@
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Blink: Fast Connectivity Recovery Entirely in the Data Plane} in NSDI 2019  & \\
+		\textbf{[1] An Open Platform to Teach How the Internet Practically Works} in CCR 2020  & \\
+		\faTrophy~One of the three "Best of CCR" papers presented at SIGCOMM 2020 & \\
+	    \underline{T. Holterbach}, T. B{\"u}hler, T. Rellstab and L. Vanbever & \\
+\end{tabular*}\vspace{-6pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[2] Blink: Fast Connectivity Recovery Entirely in the Data Plane} in NSDI 2019  & \\
 	    \underline{T. Holterbach}, E. Costa Molero, M. Apostolaki, S. Vissicchio, A. Dainotti and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{SWIFT: Predictive Fast Reroute} in SIGCOMM 2017 & \\
+		\textbf{[3] SWIFT: Predictive Fast Reroute} in SIGCOMM 2017 & \\
 	    \underline{T. Holterbach}, S. Vissicchio, A. Dainotti and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Quantifying Interferences Between Measurements on the RIPE Atlas Platform} in IMC 2015 & \\
+		\textbf{[4] Quantifying Interferences Between Measurements on the RIPE Atlas Platform} in IMC 2015 & \\
 	    \underline{T. Holterbach}, C. Pelsser, R. Bush and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
+
 \vspace{6pt}
 
 \end{itemize}
@@ -261,43 +344,40 @@
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{(Self) Driving Under the Influence}, in HotNets 2019 & \\
+		\textbf{[5] (Self) Driving Under the Influence: Intoxicating Adversarial Network Inputs}, in HotNets 2019 & \\
 	    R. Meier, \underline{T. Holterbach}, S. Keck, M. Stähli, V. Lenders, A. Singla and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Boosting the BGP convergence in SDXes with SWIFT}, in SIGCOMM 2017 & \\
+		\textbf{[6] Boosting the BGP convergence in SDXes with SWIFT}, in SIGCOMM 2017 & \\
 	    P. Mao, R. Birkner, \underline{T. Holterbach} and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Measurement Vantage Point Selection Using A Similarity Metric} in IRTF \& ISOC ANRW & \\
+		\textbf{[7] Measurement Vantage Point Selection Using A Similarity Metric} in IRTF \& ISOC ANRW & \\
 	    \underline{T. Holterbach}, E. Aben, C. Pelsser, R. Bush, L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Supercharge me: Boost Router Convergence with SDN}, in SIGCOMM 2015 & \\
+		\textbf{[8] Supercharge me: Boost Router Convergence with SDN}, in SIGCOMM 2015 & \\
 	    M. Alan Chang, \underline{T. Holterbach}, M. Happe, L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 %\item \large \textbf{Workshop papers, posters and demos:} \normalsize
 
 
-
-
-
-
-
 \end{itemize}
 \vspace{-0.5cm}
 
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Teaching}
+\resheading{Teaching and Mentoring}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}[label={},leftmargin=3mm]
@@ -310,7 +390,7 @@
 
 \item
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		Communication Networks & 2016, 2017, 2018 and 2019\\
+		Communication Networks & 2016 - 2020\\
 		% ETH Z{\"u}rich, with Prof. Laurent Vanbever &\\
 \end{tabular*}\vspace{-6pt}
 
@@ -318,13 +398,13 @@
 
 \item
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		Advanced Topics in Communication Networks & 2018 and 2019\\
+		Advanced Topics in Communication Networks & 2018 - 2020\\
 		% ETH Z{\"u}rich, with Prof. Laurent Vanbever &\\
 \end{tabular*}\vspace{-6pt}
 
 \item
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		Discrete Event Systems & 2019\\
+		Discrete Event Systems & 2019 - 2020\\
 		% ETH Z{\"u}rich, with Prof. Laurent Vanbever &\\
 \end{tabular*}\vspace{-6pt}
 
@@ -413,17 +493,22 @@ at ETH Z{\"u}rich
 \begin{itemize}[label={},leftmargin=3mm]
 \setlength\itemsep{1em}
 
-
-\item
+\item   
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{Occasional Reviewer} for IEEE/ACM ToN and ACM CCR \\
+	\textbf{TPC Member for the Artifact Evaluation} for ACM CoNEXT & 2020  \\
 \end{tabular*}\vspace{-10pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{Shadow TPC member} for ACM IMC & 2019  \\
+\end{tabular*}\vspace{-10pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{Occasional Reviewer} for IEEE/ACM ToN and ACM CCR & 2016 and 2017 \\
 \end{tabular*}\vspace{-10pt}
 
 \item
@@ -454,72 +539,16 @@ at ETH Z{\"u}rich
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Skills}
-
-\begin{itemize}[label={},leftmargin=3mm]
-% \setlength\itemsep{0.3em}
-\vspace{-0.3cm}
-
-\item \sffamily \large \textbf{Computer Networks:} \normalsize
-\vspace{0.1cm}
-
-\item
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{p{4cm}p{12.5cm}}
-  Strong Skills & Network protocols and tools, Internet architecture, Software-defined
-  networking, Programmable data planes (P4)  \\[5pt]
-
-  Protocols & STP, IP, BGP, OSPF, MPLS, TCP, DNS, OpenFlow, NetFlow, etc  \\[5pt]
-
-  Tools & Quagga/BIRD, Openvswitch, RIPE Atlas, BGPStream, Tcpdump, Netfilter, OpenVPN, etc  \\[5pt]
-
-  Extra & Cisco iOS, Graph algorithms, Network security, Wireless sensor network
-
-\end{tabular}
-\vspace{-0.3cm}
-
-\item \sffamily \large \textbf{Computer Science:} \normalsize
-\vspace{0.1cm}
-
-\item
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{p{4cm}p{12.5cm}}
-  Strong Skills & Python and C programming, UNIX systems, Algorithm design \\[5pt]
-
-  Languages & C, Python, Java, Bash, R, SQL, etc \\[5pt]
-
-  Tools & Virtualbox/KVM, Docker, Vagrant, Valgrind, Git, etc \\[5pt]
-
-  Extra & Machine learning, Data Mining, Distributed systems, Hardware programming (FPGA), Parallel programming, Compilation
-
-\end{tabular}
-
-
-
-
-
-\vspace{-0.4cm}
-
-\item \large \textbf{Communication:} \normalsize
-\vspace{0.1cm}
-
-\item
-
-\begin{tabular}{p{4cm}p{12.5cm}}
-  French & Mother tongue \\[5pt]
-  English & 5+ years of experience in writing, presenting and teaching \\[5pt]
-\end{tabular}
-
-\vspace{-0.5cm}
-
-\end{itemize}
-
-\vspace{-0.2cm}
-
+\resheading{References}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{itemize}[label={},leftmargin=3mm]
+\setlength\itemsep{1em}
+
+\item
+
+References available upon request.
+\end{itemize}
 
 
 \end{document}
