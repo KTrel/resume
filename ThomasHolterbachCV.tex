@@ -17,7 +17,9 @@
 \usepackage{graphicx}
 \usepackage{multirow}
 \usepackage{marvosym}
-\usepackage{fontawesome}
+\usepackage{fontawesome5}
+\usepackage{hyperref}
+
 \newcommand\fboxpic{\fcolorbox{lightgray}{white}}
 
 \robustify\cftdotfill
@@ -83,7 +85,7 @@
 &  & \\
 & \sffamily{ \sffamily{\Letter~~\small \textcolor{darkgray}{\textit{thomasholterbach@gmail.com}}}} & \\
 % & \sffamily{ \sffami	ly{\Large \ComputerMouse \small~~\textcolor{darkgray}{\textit{thomasholterbach.eu}}}} & \\
-& \sffamily{ \sffamily{\small \textcolor{darkgray}{\textit{French, 31 years old}}}} &
+& \sffamily{ \sffamily{\small \textcolor{darkgray}{\textit{French, born on 31 July 1991}}}} &
 % \sffamily{\sffamily{French, 28 years old} & \\
 
 % \renewcommand{\arraystretch}{-1}
@@ -169,22 +171,35 @@
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
     		\sffamily \textbf{Postdoctoral researcher}, University of Strasbourg, France & \sffamily Sept. 2021 -\\
     		% \sffamily \textit{Networked Systems Group} & \\
-    		\sffamily Advised by Prof. Cristel Pelsser in the Computer Networks Group & \sffamily Apr. 2023\\
-			\sffamily $\bullet$~~I research how to quickly detect and mitigate BGP leaks and hijacks.  & \\
-			\sffamily $\bullet$~~I study which BGP vantage points to use when measuring Internet routing.  & \\
+    		\sffamily Advised by Prof. Cristel Pelsser in the Computer Networks Group & \sffamily Nov. 2023\\
+			\sffamily $\bullet$~~I developed a system to quickly detect forged-origin hijacks. & \\
+			\sffamily The system is open source and runs at \href{https://dfoh.uclouvain.be/}{\textit{dfoh.uclouvain.be/}}. & \\
+			\sffamily $\bullet$~~I developed a system to select which BGP vantage points to use when & \\
+			\sffamily  measuring Internet routing. The system runs at \href{http://185.216.75.11:5001/}{\textit{http://185.216.75.11:5001/}}. & \\
 
     \end{tabular*}\vspace{-10pt}
 
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-    		\sffamily \textbf{Postdoctoral researcher}, Georgia Tech, GA, USA & \sffamily Sept. 2022 -\\
+    		\sffamily \textbf{Postdoctoral researcher and Instructor}, Georgia Tech, GA, USA & \sffamily Sept. 2022 -\\
     		% \sffamily \textit{Networked Systems Group} & \\
     		\sffamily Advised by Prof. Alberto Dainotti in the Internet Intelligence Lab & \sffamily Dec. 2022\\
-			\sffamily $\bullet$~~I researched on how to build a data-driven network Telescope. & \\
+			\sffamily $\bullet$~~I researched how to build a data-driven network Telescope. & \\
 			\sffamily $\bullet$~~I was an instructor in a Master-level class about Internet routing and P4.  & \\
 
     \end{tabular*}\vspace{-10pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\sffamily \textbf{Teaching Assistant}, ETH Z{\"u}rich, Switzerland & \sffamily Feb. 2022 -\\
+		\sffamily Advised by Prof. Laurent Vanbever in the Networked Systems Group & \sffamily Apr. 2022\\
+		\sffamily $\bullet$~~I operated the "mini-Internet" platform in a class with >150 students.  & \\
+		\sffamily The platform is open source \href{https://github.com/nsg-ethz/mini_internet_project}{(\textit{mini-inter.net})} and used in many universities world-wide.  & \\
+
+\end{tabular*}\vspace{-6pt}
+
 
 \item
 
@@ -192,9 +207,9 @@
     		\sffamily \textbf{Research and Teaching Assistant}, ETH Z{\"u}rich, Switzerland & \sffamily Feb. 2015 -\\
             \sffamily Supervised by Prof. Laurent Vanbever in the Networked Systems Group & \sffamily Aug. 2021\\
     		\sffamily $\bullet$~~I developed a framework to improve the Internet convergence upon failures.  & \\
-	        \sffamily ~~~~Published in [2,3,6,8], see \textit{blink.ethz.ch} and \textit{swift.ethz.ch} for further information.  & \\
-    		\sffamily $\bullet$~~I developed a "mini-Internet" platform to give students hands on experience  & \\
-    		\sffamily ~~~~on real routers configuration.  We published the platform in [1].& \\
+	        \sffamily ~~~~Published in [2,3,6], see \href{https://blink.ethz.ch}{\textit{blink.ethz.ch}} and \href{https://swift.ethz.ch}{\textit{swift.ethz.ch}} for further information.  & \\
+    		\sffamily $\bullet$~~I developed a "mini-Internet" platform to give students hands on experience routers  & \\
+    		\sffamily ~~~~configuration.  We published the platform in [5].& \\
 
     \end{tabular*}\vspace{-6pt}
 
@@ -204,7 +219,7 @@
     		\sffamily \textbf{Visiting Student}, University College London, UK  & \sffamily May 2018 - \\
             \sffamily Supervised by Dr. Stefano Vissicchio in the Department of Computer Science & \sffamily July 2018\\
     		\sffamily $\bullet$~~I developed a P4 program to detect Internet failures in the data plane.  & \\
-    		\sffamily ~~~~The program is used in [2], and publicly available at \textit{github.com/nsg-ethz/Blink}. & \\
+    		\sffamily ~~~~The program is used in [3], and publicly available at \href{https://github.com/nsg-ethz/Blink}{\textit{github.com/nsg-ethz/Blink}}. & \\
     \end{tabular*}\vspace{-6pt}
 
 \item
@@ -213,7 +228,7 @@
     		\sffamily \textbf{Junior Researcher}, University of California San Diego, CA, USA & \sffamily June 2016 - \\
             \sffamily Supervised by Dr. Alberto Dainotti in the Center for Applied Internet Data Analysis & \sffamily Dec. 2016\\
     		\sffamily $\bullet$~~I measured the Internet convergence time upon failures using & \\
-    		\sffamily ~~~~real BGP data as well as a simulator. Results are used in [3].  & \\
+    		\sffamily ~~~~real BGP data as well as a simulator. Results are used in [2].  & \\
 
     \end{tabular*}\vspace{-6pt}
 
@@ -223,7 +238,7 @@
     		\sffamily \textbf{Research Intern}, Internet Initiative Japan, Tokyo, Japan & \sffamily June 2014 - \\
     		\sffamily Supervised by Prof. Cristel Pelsser and Randy Bush & \sffamily Dec. 2014\\
     		\sffamily $\bullet$~~I studied how accurate are Internet measurement platforms  & \\
-    		\sffamily ~~~~such as RIPE Atlas, and we published the work in [4] and [7].  & \\
+    		\sffamily ~~~~such as RIPE Atlas, and we published the work in [1].  & \\
     \end{tabular*}\vspace{-6pt}
 
 \item
@@ -232,7 +247,7 @@
     		\sffamily \textbf{Research Intern}, University of Strasbourg, France & \sffamily  June 2013 - Aug. 2013 \\
     		\sffamily Supervised by Dr. Pascal Merindol in the ICube laboratory & \sffamily \& Jan. 2014 - July 2014\\
     		\sffamily $\bullet$~~I optimized algorithms designed to prevent forwarding loops. & \\
-    		 \multicolumn{2}{l}{\sffamily ~~~~Results are presented in my Master thesis: \small \textit{dropbox.com/s/fuvamzi5sv1hawq/Mthesis.pdf}.} \\
+    		 \multicolumn{2}{l}{\sffamily ~~~~Results are presented in my Master thesis: \small \href{https://dropbox.com/s/fuvamzi5sv1hawq/Mthesis.pdf}{\textit{dropbox.com/s/fuvamzi5sv1hawq/Mthesis.pdf}}.} \\
     \end{tabular*}\vspace{-6pt}
 
 \end{itemize}
@@ -256,29 +271,68 @@
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[1] An Open Platform to Teach How the Internet Practically Works} in CCR 2020  & \\
+		\textbf{[9] Measuring Internet Routing from the Most Valuable Points} submitted to NSDI 2024  & \\
+		\faVideo~Presented at RIPE 85: \href{https://ripe85.ripe.net/archives/video/934/}{\textit{https://ripe85.ripe.net/archives/video/934/}} & \\
+	    T. Alfroy, \underline{T. Holterbach}, T. Krenc, KC Claffy, and C. Pelsser & \\
+\end{tabular*}\vspace{-6pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[8] A System to Detect Forge-Origin BGP Hijacks} in NSDI 2024  & \\
+		\faVideo~Presented at the Routing Security Summit 2023: \href{https://youtu.be/rdQuy6ckI-s?si=orhLmrXGG9fDvxPW}{\textit{https://youtu.be/rdQuy6ckI-s?si=orhLmrXGG9fDvxPW}} & \\
+	    \underline{T. Holterbach}, T. Alfroy, A. Phokeer, A. Dainotti and C. Pelsser & \\
+\end{tabular*}\vspace{-6pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[7] Internet Science Moonshot: Expanding BGP Data Horizons}, in HotNets 2023 & \\
+	    T. Alfroy, \underline{T. Holterbach}, T. Krenc, KC Claffy, C. Pelsser & \\
+\end{tabular*}\vspace{-6pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[6] A Framework To Fast Reroute Traffic Upon Remote Outages}, Doctoral Thesis, 2021 & \\
+		Available at \href{https://www.research-collection.ethz.ch/handle/20.500.11850/521609}{\textit{research-collection.ethz.ch/handle/20.500.11850/521609}}  & \\
+	    T. Holterbach & \\
+\end{tabular*}\vspace{-6pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[5] An Open Platform to Teach How the Internet Practically Works} in CCR 2020  & \\
 		\faTrophy~One of the three "Best of CCR" papers presented at SIGCOMM 2020 & \\
+		\faVideo~Presented at NANOG 78: \href{https://youtu.be/8SRjTqH5Z8M?si=6z0sbgnm6c32Zgu0}{\textit{https://youtu.be/8SRjTqH5Z8M?si\=6z0sbgnm6c32Zgu0}} & \\
 	    \underline{T. Holterbach}, T. B{\"u}hler, T. Rellstab and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[2] Blink: Fast Connectivity Recovery Entirely in the Data Plane} in NSDI 2019  & \\
+		\textbf{[4] (Self) Driving Under the Influence: Intoxicating Adversarial Network Inputs}, in HotNets 2019 & \\
+	    R. Meier, \underline{T. Holterbach}, S. Keck, M. Stähli, V. Lenders, A. Singla and L. Vanbever & \\
+\end{tabular*}\vspace{-6pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[3] Blink: Fast Connectivity Recovery Entirely in the Data Plane} in NSDI 2019  & \\
 	    \underline{T. Holterbach}, E. Costa Molero, M. Apostolaki, S. Vissicchio, A. Dainotti and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[3] SWIFT: Predictive Fast Reroute} in SIGCOMM 2017 & \\
+		\textbf{[2] SWIFT: Predictive Fast Reroute} in SIGCOMM 2017 & \\
 	    \underline{T. Holterbach}, S. Vissicchio, A. Dainotti and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[4] Quantifying Interferences Between Measurements on the RIPE Atlas Platform} in IMC 2015 & \\
+		\textbf{[1] Quantifying Interferences Between Measurements on the RIPE Atlas Platform} in IMC 2015 & \\
 	    \underline{T. Holterbach}, C. Pelsser, R. Bush and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
@@ -288,10 +342,8 @@
 
 \vspace{-0.6cm}
 
-\newpage 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Workshop papers, posters and demos}
+\resheading{Posters and demos}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}[label={},leftmargin=3mm]
@@ -302,28 +354,28 @@
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[5] (Self) Driving Under the Influence: Intoxicating Adversarial Network Inputs}, in HotNets 2019 & \\
-	    R. Meier, \underline{T. Holterbach}, S. Keck, M. Stähli, V. Lenders, A. Singla and L. Vanbever & \\
+		\textbf{MVP: Measuring Internet Routing from the Most Valuable Points} in IMC 2022 & \\
+	    T. Alfroy, \underline{T. Holterbach} and C. Pelsser & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[6] Boosting the BGP convergence in SDXes with SWIFT}, in SIGCOMM 2017 & \\
+		\textbf{Boosting the BGP convergence in SDXes with SWIFT}, in SIGCOMM 2017 & \\
 	    P. Mao, R. Birkner, \underline{T. Holterbach} and L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[7] Measurement Vantage Point Selection Using A Similarity Metric} in IRTF \& ISOC ANRW & \\
+		\textbf{Measurement Vantage Point Selection Using A Similarity Metric} in IRTF \& ISOC ANRW & \\
 	    \underline{T. Holterbach}, E. Aben, C. Pelsser, R. Bush, L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[8] Supercharge me: Boost Router Convergence with SDN}, in SIGCOMM 2015 & \\
+		\textbf{Supercharge me: Boost Router Convergence with SDN}, in SIGCOMM 2015 & \\
 	    M. Alan Chang, \underline{T. Holterbach}, M. Happe, L. Vanbever & \\
 \end{tabular*}\vspace{-6pt}
 %\item \large \textbf{Workshop papers, posters and demos:} \normalsize
@@ -332,6 +384,7 @@
 \end{itemize}
 \vspace{-0.5cm}
 
+\newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Skills}
@@ -373,7 +426,7 @@
 
   Tools & Virtualbox/KVM, Docker, Vagrant, Valgrind, Git, etc \\[5pt]
 
-  Extra & Machine learning, Data Mining, Distributed systems, Hardware programming, Parallel programming, Compilation, Probability and Statistics
+  Extra & Machine learning, Data Mining, Distributed systems, Hardware programming, Parallel programming, SMT solvers, Probability and Statistics
 
 \end{tabular}
 
@@ -399,8 +452,6 @@
 
 \vspace{-0.2cm}
 
-\newpage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Teaching and Mentoring}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -409,6 +460,17 @@
 % \setlength\itemsep{0.3em}
 
 \vspace{-0.3cm}
+
+\item \sffamily \large \textbf{Lecture at Georgia Tech:} \normalsize
+\vspace{0.1cm}
+
+\item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		Computer Networks (CS6250) & 2022 \\
+		% ETH Z{\"u}rich, with Prof. Laurent Vanbever &\\
+\end{tabular*}\vspace{-6pt}
+
+\vspace{0.3cm}
 
 \item \sffamily \large \textbf{Lectures at ETH Z{\"u}rich:} \normalsize
 \vspace{0.1cm}
@@ -439,9 +501,24 @@
 \vspace{0.1cm}
 
 \item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		1 Doctoral thesis supervision (Thomas Alfroy, University of Strasbourg)\\
+		% ETH Z{\"u}rich, with Prof. Laurent Vanbever &\\
+\end{tabular*}\vspace{-6pt}
 
-3 Master thesis (6 months) and 12 Semester thesis (3 months) supervised
-at ETH Z{\"u}rich
+\item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		3 Master thesis supervision (all at ETH Zurich)\\
+		% ETH Z{\"u}rich, with Prof. Laurent Vanbever &\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		13 Semester thesis supervision (12 at ETH Zurich, 1 at the University of Strasbourg)\\
+		% ETH Z{\"u}rich, with Prof. Laurent Vanbever &\\
+\end{tabular*}\vspace{-6pt}
+
+
 
 
 \vspace{-0.5cm}
@@ -510,6 +587,8 @@ at ETH Z{\"u}rich
 
 % \newpage
 
+\newpage
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Activities and Services}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -517,6 +596,12 @@ at ETH Z{\"u}rich
 
 \begin{itemize}[label={},leftmargin=3mm]
 \setlength\itemsep{1em}
+
+\item   
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+	\textbf{Reviewed five papers} for ACM CoNEXT & 2022  \\
+\end{tabular*}\vspace{-10pt}
 
 \item   
 
