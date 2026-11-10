@@ -33,6 +33,7 @@
 \setlength{\outerbordwidth}{3pt}  % Width of border outside of title bars
 \definecolor{shadecolor}{gray}{0.85}  % Outer background color of title bars (0 = black, 1 = white)
 \definecolor{shadecolorB}{gray}{0.97}  % Inner background color of title bars
+\definecolor{pubsubshade}{HTML}{E7EDF2}  % Light band for publication subsections
 
 
 %-----------------------------------------------------------
@@ -45,7 +46,7 @@
 \setlength{\paperheight}{11in}
 \setlength{\paperwidth}{8.5in}
 \setlength{\tabcolsep}{0in}
-\setlength{\textheight}{9.5in}
+\setlength{\textheight}{9.9in}
 \setlength{\textwidth}{7in}
 \setlength{\topmargin}{-0.3in}
 \setlength{\topskip}{0in}
@@ -61,6 +62,12 @@
 \setlength{\fboxsep}{0pt}\framebox[\textwidth][l]{\setlength{\fboxsep}{4pt}\fcolorbox{shadecolorB}{shadecolorB}{\textbf{\sffamily{\mbox{~}\makebox[6.762in][l]{\large #1} \vphantom{p\^{E}}}}}}
     \end{shaded}
   }\vspace{-5pt}
+}
+\newcommand{\respubsubheading}[1]{%
+  \par\vspace{6pt}\noindent
+  {\setlength{\fboxsep}{4pt}%
+   \colorbox{pubsubshade}{\makebox[\dimexpr6.5in-2\fboxsep\relax][l]{\sffamily\bfseries\strut #1}}}%
+  \par\vspace{3pt}%
 }
 \newcommand{\ressubheading}[4]{
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
@@ -79,10 +86,9 @@
 \renewcommand{\arraystretch}{1.2}
 \begin{tabular*}{7in}{l@{\extracolsep{\fill}}rr}
 \sffamily{\textbf{\Huge Thomas Holterbach}} & & \multirow{6}{*}{\fboxpic{\includegraphics[width=3.5cm]{thomas_picture_zoom2.jpg}}} \\[5pt]
-% \multicolumn{2}{c}{\sffamily{\large Postdoctoral researcher at the University of Strasbourg ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~}}  &   \\
-&  & \\
-&  & \\
-&  & \\
+\sffamily{\large Co-founder of \href{https://bgproutes.io}{bgproutes.io}} & & \\
+\sffamily{\large PhD in Computer Networks, ETH Zurich} & & \\
+& & \\
 & \sffamily{ \sffamily{\Letter~~\small \textcolor{darkgray}{\textit{thomasholterbach@gmail.com}}}} & \\
 % & \sffamily{ \sffami	ly{\Large \ComputerMouse \small~~\textcolor{darkgray}{\textit{thomasholterbach.eu}}}} & \\
 & \sffamily{ \sffamily{\small \textcolor{darkgray}{\textit{French, born on 31 July 1991}}}} &
@@ -100,17 +106,17 @@
 
 \vspace{0.2cm}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Research Interests}
-\vspace{-0.3cm}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \resheading{Research Interests}
+% \vspace{-0.3cm}
 
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular*}{7in}{p{0.3cm}p{10cm}p{8cm}}
-    & \\
-& \sffamily{$\bullet$~~Internet routing, architecture and security} & \sffamily $\bullet$~~Software-defined networking \\
-& \sffamily $\bullet$~~Network traffic measurements and analysis & \sffamily $\bullet$~~Programmable network hardware \\
-& \sffamily $\bullet$~~Artificial intelligence for networking & \sffamily $\bullet$~~Algorithm design and optimisation \\
-\end{tabular*}
+% \renewcommand{\arraystretch}{1.2}
+% \begin{tabular*}{7in}{p{0.3cm}p{10cm}p{8cm}}
+%     & \\
+% & \sffamily{$\bullet$~~Internet routing, architecture and security} & \sffamily $\bullet$~~Software-defined networking \\
+% & \sffamily $\bullet$~~Network traffic measurements and analysis & \sffamily $\bullet$~~Programmable network hardware \\
+% & \sffamily $\bullet$~~Artificial intelligence for networking & \sffamily $\bullet$~~Algorithm design and optimisation \\
+% \end{tabular*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -169,11 +175,20 @@
 \item
 
     \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+        \sffamily \textbf{Co-founder of \href{https://bgproutes.io}{bgproutes.io}}, France (with Dr. Thomas Alfroy) & \sffamily May 2026 - Present\\
+        \multicolumn{2}{l}{\sffamily $\bullet$~~bgproutes.io runs tools for deeper visibility into BGP routing.} \\
+        \multicolumn{2}{l}{\sffamily $\bullet$~~bgproutes.io also provides a public platform that collects BGP data from} \\
+        \multicolumn{2}{l}{\sffamily ~~~~hundreds of real networks and serves hundreds of network operators each week.} \\
+        \multicolumn{2}{l}{\sffamily $\bullet$~~I created a YouTube series on BGP monitoring: \href{https://www.youtube.com/@bgproutes_io}{\textit{youtube.com/@bgproutes\_io}}.} \\
+    \end{tabular*}\vspace{-10pt}
+
+\item
+
+    \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
     		\sffamily \textbf{Postdoctoral researcher}, University of Strasbourg, France & \sffamily Sept. 2021 -\\
     		% \sffamily \textit{Networked Systems Group} & \\
     		\sffamily Advised by Prof. Cristel Pelsser in the Computer Networks Group & \sffamily May 2026\\
-			\sffamily $\bullet$~~I developed a new BGP data collection and monitoring platform. & \\
-			\sffamily The system runs at \href{https://bgproutes.io}{\textit{bgproutes.io}}. & \\
+			\sffamily $\bullet$~~I designed new algorithms to compress BGP data. & \\
 			\sffamily $\bullet$~~I developed a system to quickly detect forged-origin hijacks. & \\
 			\sffamily The system is open source and runs at \href{https://dfoh.uclouvain.be/}{\textit{dfoh.uclouvain.be/}}. & \\
 
@@ -256,49 +271,99 @@
 % \newpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Publications}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\vspace{-0.2cm}
-
-
+\resheading{Research Publications}
+\vspace{2pt}
 \sffamily
 
+\respubsubheading{Papers in Top International Conferences}
 \begin{itemize}[label={},leftmargin=3mm]
-\setlength\itemsep{1em}
-
-%\item \large \textbf{Conference papers:} \normalsize
+\setlength\itemsep{0.7em}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-	\textbf{[9] The Next Generation of BGP Data Collection Platforms} in SIGCOMM 2024  & \\
+    \textbf{[12] A System for Fast, Accurate, and Intuitive Querying of} & \\
+    \textbf{Large-Scale BGP Datasets} in IMC 2026 & \\
+    \underline{T. Holterbach}, T. Alfroy, A. Mohsenpour, T. Krenc, K. C. Claffy, and C. Pelsser & \\
+\end{tabular*}\vspace{-4pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+    \textbf{[11] MORP4: A Dynamic Network Telescope} in NSDI 2026 & \\
+    I. Xygkou, J. K. Sojan, D. Rauthan, F. Zhu, \underline{T. Holterbach}, S. Alcock, & \\
+    B. Flanagan, A. Saeed, and A. Dainotti & \\
+\end{tabular*}\vspace{-4pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+	\textbf{[10] The Next Generation of BGP Data Collection Platforms} in SIGCOMM 2024  & \\
 	\faTrophy~Best Paper Award & \\
 	T. Alfroy, \underline{T. Holterbach}, T. Krenc, KC Claffy, and C. Pelsser & \\
-\end{tabular*}\vspace{-6pt}
-
-\item
-
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[9] Measuring Internet Routing from the Most Valuable Points} in arXiv 2024  & \\
-		\faVideo~Presented at RIPE 85: \href{https://ripe85.ripe.net/archives/video/934/}{\textit{https://ripe85.ripe.net/archives/video/934/}} & \\
-	    T. Alfroy, \underline{T. Holterbach}, T. Krenc, KC Claffy, and C. Pelsser & \\
-\end{tabular*}\vspace{-6pt}
+\end{tabular*}\vspace{-4pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{[8] A System to Detect Forge-Origin BGP Hijacks} in NSDI 2024  & \\
-		\faVideo~Presented at the Routing Security Summit 2023: \href{https://youtu.be/rdQuy6ckI-s?si=orhLmrXGG9fDvxPW}{\textit{https://youtu.be/rdQuy6ckI-s?si=orhLmrXGG9fDvxPW}} & \\
 	    \underline{T. Holterbach}, T. Alfroy, A. Phokeer, A. Dainotti and C. Pelsser & \\
-\end{tabular*}\vspace{-6pt}
+\end{tabular*}\vspace{-4pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{[7] Internet Science Moonshot: Expanding BGP Data Horizons}, in HotNets 2023 & \\
 	    T. Alfroy, \underline{T. Holterbach}, T. Krenc, KC Claffy, C. Pelsser & \\
-\end{tabular*}\vspace{-6pt}
+\end{tabular*}\vspace{-4pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[5] An Open Platform to Teach How the Internet Practically Works} in CCR 2020  & \\
+		\faTrophy~One of the three "Best of CCR" papers presented at SIGCOMM 2020 & \\
+	    \underline{T. Holterbach}, T. B{\"u}hler, T. Rellstab and L. Vanbever & \\
+\end{tabular*}\vspace{-4pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[4] (Self) Driving Under the Influence: Intoxicating Adversarial Network Inputs}, in HotNets 2019 & \\
+	    R. Meier, \underline{T. Holterbach}, S. Keck, M. Stähli, V. Lenders, A. Singla and L. Vanbever & \\
+\end{tabular*}\vspace{-4pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[3] Blink: Fast Connectivity Recovery Entirely in the Data Plane} in NSDI 2019  & \\
+	    \underline{T. Holterbach}, E. Costa Molero, M. Apostolaki, S. Vissicchio, A. Dainotti and L. Vanbever & \\
+\end{tabular*}\vspace{-4pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[2] SWIFT: Predictive Fast Reroute} in SIGCOMM 2017 & \\
+	    \underline{T. Holterbach}, S. Vissicchio, A. Dainotti and L. Vanbever & \\
+\end{tabular*}\vspace{-4pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[1] Quantifying Interferences Between Measurements on the RIPE Atlas Platform} in IMC 2015 & \\
+	    \underline{T. Holterbach}, C. Pelsser, R. Bush and L. Vanbever & \\
+\end{tabular*}\vspace{-4pt}
+
+\end{itemize}
+\respubsubheading{Posters, Demos, and Technical Reports}
+\begin{itemize}[label={},leftmargin=3mm]
+\setlength\itemsep{0.7em}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{[9] Measuring Internet Routing from the Most Valuable Points} in arXiv 2024  & \\
+	    T. Alfroy, \underline{T. Holterbach}, T. Krenc, KC Claffy, and C. Pelsser & \\
+\end{tabular*}\vspace{-4pt}
 
 \item
 
@@ -306,167 +371,211 @@
 		\textbf{[6] A Framework To Fast Reroute Traffic Upon Remote Outages}, Doctoral Thesis, 2021 & \\
 		Available at \href{https://www.research-collection.ethz.ch/handle/20.500.11850/521609}{\textit{research-collection.ethz.ch/handle/20.500.11850/521609}}  & \\
 	    T. Holterbach & \\
-\end{tabular*}\vspace{-6pt}
-
-\item
-
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[5] An Open Platform to Teach How the Internet Practically Works} in CCR 2020  & \\
-		\faTrophy~One of the three "Best of CCR" papers presented at SIGCOMM 2020 & \\
-		\faVideo~Presented at NANOG 78: \href{https://youtu.be/8SRjTqH5Z8M?si=6z0sbgnm6c32Zgu0}{\textit{https://youtu.be/8SRjTqH5Z8M?si\=6z0sbgnm6c32Zgu0}} & \\
-	    \underline{T. Holterbach}, T. B{\"u}hler, T. Rellstab and L. Vanbever & \\
-\end{tabular*}\vspace{-6pt}
-
-\item
-
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[4] (Self) Driving Under the Influence: Intoxicating Adversarial Network Inputs}, in HotNets 2019 & \\
-	    R. Meier, \underline{T. Holterbach}, S. Keck, M. Stähli, V. Lenders, A. Singla and L. Vanbever & \\
-\end{tabular*}\vspace{-6pt}
-
-\item
-
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[3] Blink: Fast Connectivity Recovery Entirely in the Data Plane} in NSDI 2019  & \\
-	    \underline{T. Holterbach}, E. Costa Molero, M. Apostolaki, S. Vissicchio, A. Dainotti and L. Vanbever & \\
-\end{tabular*}\vspace{-6pt}
-
-\item
-
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[2] SWIFT: Predictive Fast Reroute} in SIGCOMM 2017 & \\
-	    \underline{T. Holterbach}, S. Vissicchio, A. Dainotti and L. Vanbever & \\
-\end{tabular*}\vspace{-6pt}
-
-\item
-
-\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-		\textbf{[1] Quantifying Interferences Between Measurements on the RIPE Atlas Platform} in IMC 2015 & \\
-	    \underline{T. Holterbach}, C. Pelsser, R. Bush and L. Vanbever & \\
-\end{tabular*}\vspace{-6pt}
-
-\vspace{6pt}
-
-\end{itemize}
-
-\vspace{-0.6cm}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Posters and demos}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{itemize}[label={},leftmargin=3mm]
-\setlength\itemsep{1em}
-
-\vspace{-0.2cm}
+\end{tabular*}\vspace{-4pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{MVP: Measuring Internet Routing from the Most Valuable Points} in IMC 2022 & \\
 	    T. Alfroy, \underline{T. Holterbach} and C. Pelsser & \\
-\end{tabular*}\vspace{-6pt}
+\end{tabular*}\vspace{-4pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{Boosting the BGP convergence in SDXes with SWIFT}, in SIGCOMM 2017 & \\
 	    P. Mao, R. Birkner, \underline{T. Holterbach} and L. Vanbever & \\
-\end{tabular*}\vspace{-6pt}
+\end{tabular*}\vspace{-4pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{Measurement Vantage Point Selection Using A Similarity Metric} in IRTF \& ISOC ANRW & \\
 	    \underline{T. Holterbach}, E. Aben, C. Pelsser, R. Bush, L. Vanbever & \\
-\end{tabular*}\vspace{-6pt}
+\end{tabular*}\vspace{-4pt}
 
 \item
 
 \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
 		\textbf{Supercharge me: Boost Router Convergence with SDN}, in SIGCOMM 2015 & \\
 	    M. Alan Chang, \underline{T. Holterbach}, M. Happe, L. Vanbever & \\
-\end{tabular*}\vspace{-6pt}
+\end{tabular*}\vspace{-4pt}
 %\item \large \textbf{Workshop papers, posters and demos:} \normalsize
 
-
 \end{itemize}
 \vspace{-0.5cm}
 
-\newpage
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\resheading{Skills}
+\resheading{Presentations at Operational Conferences}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
 
 \begin{itemize}[label={},leftmargin=3mm]
-% \setlength\itemsep{0.3em}
-\vspace{-0.3cm}
-
-\item \sffamily \large \textbf{Computer Networks:} \normalsize
-\vspace{0.1cm}
+\setlength\itemsep{0.35em}
 
 \item
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{p{4cm}p{12.5cm}}
-  Strong Skills & Network protocols and tools, Internet architecture, Software-defined
-  networking, Programmable data planes (P4)  \\[5pt]
-
-  Protocols & STP, IP, BGP, OSPF, MPLS, TCP, DNS, OpenFlow, NetFlow, etc  \\[5pt]
-
-  Tools & Quagga/BIRD, Openvswitch, RIPE Atlas, BGPStream, Tcpdump, Netfilter, OpenVPN, etc  \\[5pt]
-
-  Extra & Cisco IOS, Graph algorithms, Network security, Wireless sensor network
-
-\end{tabular}
-\vspace{-0.3cm}
-
-\item \sffamily \large \textbf{Computer Science:} \normalsize
-\vspace{0.1cm}
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{Expanding Routing Visibility at IXPs with BMP}\newline\textit{RIPE 93, Sofia, Bulgaria} & \sffamily Oct. 2026\\
+\end{tabular*}\vspace{-6pt}
 
 \item
-
-\renewcommand{\arraystretch}{1.2}
-\begin{tabular}{p{4cm}p{12.5cm}}
-  Strong Skills & Python and C programming, UNIX systems, Algorithm design \\[5pt]
-
-  Languages & C, Python, Java, Bash, R, SQL, etc \\[5pt]
-
-  Tools & Virtualbox/KVM, Docker, Vagrant, Valgrind, Git, etc \\[5pt]
-
-  Extra & Machine learning, Data mining and analytics, Hardware programming, SMT solvers, probability and statistics
-
-\end{tabular}
-
-
-
-
-
-\vspace{-0.4cm}
-
-\item \large \textbf{Languages:} \normalsize
-\vspace{0.1cm}
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{Expanding Routing Visibility at IXPs with BMP}\newline\textit{BalticNOG, Riga, Latvia} & \sffamily Sep. 2026\\
+\end{tabular*}\vspace{-6pt}
 
 \item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{Expanding Routing Visibility at IXPs with BMP}\newline\textit{European Peering Forum, Paris, France} & \sffamily Sep. 2026\\
+\end{tabular*}\vspace{-6pt}
 
-\begin{tabular}{p{4cm}p{12.5cm}}
-  French & Mother tongue \\[5pt]
-  English & 5+ years of experience in writing, presenting and teaching \\[5pt]
-\end{tabular}
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{How bgproutes.io supports latest technologies such as RPKI ROV, ASPA, and BMP}\newline\textit{RIPE SEE, Belgrade, Serbia} & \sffamily Apr. 2026\\
+\end{tabular*}\vspace{-6pt}
 
-\vspace{-0.5cm}
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{bgproutes.io: A next-gen BGP data collection platform}\newline\textit{SwiNOG, Bern, Switzerland} & \sffamily Apr. 2026\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{The Next Generation of BGP Data Collection Platforms}\newline\textit{APRICOT, Jakarta, Indonesia} & \sffamily Feb. 2026\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{The Next Generation of BGP Data Collection Platforms}\newline\textit{CSNOG, Zlín, Czech Republic} & \sffamily Jan. 2026\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{Expanding Internet Routing Visibility with BMP}\newline\textit{MENOG, Dubai, United Arab Emirates} & \sffamily Nov. 2025\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{Étendre la visibilité du routage BGP grâce à BMP}\newline\textit{FRNOG, Paris, France} & \sffamily Oct. 2025\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{Expanding Internet Routing Visibility with BMP}\newline\textit{NLNOG, Amsterdam, Netherlands} & \sffamily Sep. 2025\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{The Next Generation of BGP Data Collection Platforms}\newline\textit{NANOG 94, Denver, USA} & \sffamily Jun. 2025\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{The Next Generation of BGP Data Collection Platforms}\newline\textit{RIPE 90, Lisbon, Portugal} & \sffamily May 2025\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{La prochaine génération de plateformes de collecte de données BGP}\newline\textit{FRNOG, Paris, France} & \sffamily Sep. 2024\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{A System to Detect Forge-Origin Hijacks}\newline\textit{APRICOT, Bangkok, Thailand} & \sffamily Feb. 2024\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{A System to Detect Forge-Origin BGP Hijacks}\newline\textit{Routing Security Summit} & \sffamily 2023\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{Measuring Internet Routing from the Most Valuable Points}\newline\textit{RIPE 85, Belgrade, Serbia} & \sffamily Oct. 2022\\
+\end{tabular*}\vspace{-6pt}
+
+\item
+\begin{tabular*}{6.5in}{p{5.2in}@{\extracolsep{\fill}}r}
+    \sffamily \textbf{An Open Platform to Teach How the Internet Practically Works}\newline\textit{NANOG 78, San Francisco, USA} & \sffamily Feb. 2020\\
+\end{tabular*}\vspace{-6pt}
 
 \end{itemize}
+\vspace{-0.5cm}
 
-\vspace{-0.2cm}
+
+
+
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \resheading{Skills}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \begin{itemize}[label={},leftmargin=3mm]
+% % \setlength\itemsep{0.3em}
+% \vspace{-0.3cm}
+
+% \item \sffamily \large \textbf{Computer Networks:} \normalsize
+% \vspace{0.1cm}
+
+% \item
+
+% \renewcommand{\arraystretch}{1.2}
+% \begin{tabular}{p{4cm}p{12.5cm}}
+%   Strong Skills & Network protocols and tools, Internet architecture, Software-defined
+%   networking, Programmable data planes (P4)  \\[5pt]
+
+%   Protocols & STP, IP, BGP, OSPF, MPLS, TCP, DNS, OpenFlow, NetFlow, etc  \\[5pt]
+
+%   Tools & Quagga/BIRD, Openvswitch, RIPE Atlas, BGPStream, Tcpdump, Netfilter, OpenVPN, etc  \\[5pt]
+
+%   Extra & Cisco IOS, Graph algorithms, Network security, Wireless sensor network
+
+% \end{tabular}
+% \vspace{-0.3cm}
+
+% \item \sffamily \large \textbf{Computer Science:} \normalsize
+% \vspace{0.1cm}
+
+% \item
+
+% \renewcommand{\arraystretch}{1.2}
+% \begin{tabular}{p{4cm}p{12.5cm}}
+%   Strong Skills & Python and C programming, UNIX systems, Algorithm design \\[5pt]
+
+%   Languages & C, Python, Java, Bash, R, SQL, etc \\[5pt]
+
+%   Tools & Virtualbox/KVM, Docker, Vagrant, Valgrind, Git, etc \\[5pt]
+
+%   Extra & Machine learning, Data mining and analytics, Hardware programming, SMT solvers, probability and statistics
+
+% \end{tabular}
+
+
+
+
+
+% \vspace{-0.4cm}
+
+% \item \large \textbf{Languages:} \normalsize
+% \vspace{0.1cm}
+
+% \item
+
+% \begin{tabular}{p{4cm}p{12.5cm}}
+%   French & Mother tongue \\[5pt]
+%   English & 5+ years of experience in writing, presenting and teaching \\[5pt]
+% \end{tabular}
+
+% \vspace{-0.5cm}
+
+% \end{itemize}
+
+% \vspace{-0.2cm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \resheading{Teaching and Mentoring}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{itemize}[label={},leftmargin=3mm]
-% \setlength\itemsep{0.3em}
+\setlength\itemsep{0.5em}
 
 \vspace{-0.3cm}
 
@@ -596,71 +705,77 @@
 
 % \newpage
 
-% \newpage
 
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \resheading{Activities and Services}
-% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% \vspace{-0.3cm}
 
-% \begin{itemize}[label={},leftmargin=3mm]
-% \setlength\itemsep{1em}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\resheading{Activities and Services}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\vspace{-0.3cm}
 
-% \item   
+\begin{itemize}[label={},leftmargin=3mm]
+\setlength\itemsep{0.6em}
 
-% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-% 	\textbf{Reviewed five papers} for ACM CoNEXT & 2022  \\
-% \end{tabular*}\vspace{-10pt}
+\item
 
-% \item   
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+	\textbf{TPC Member} for ACM IMC & 2024  \\
+\end{tabular*}\vspace{-10pt}
 
-% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-% 	\textbf{TPC Member for the poster session} for ACM IMC & 2022  \\
-% \end{tabular*}\vspace{-10pt}
+\item
 
-% \item   
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+	\textbf{Reviewed five papers} for ACM CoNEXT & 2022  \\
+\end{tabular*}\vspace{-10pt}
 
-% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-% 	\textbf{TPC Member for the Artifact Evaluation} for ACM CoNEXT & 2020  \\
-% \end{tabular*}\vspace{-10pt}
+\item
 
-% \item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+	\textbf{TPC Member for the poster session} for ACM IMC & 2022  \\
+\end{tabular*}\vspace{-10pt}
 
-% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-% 		\textbf{Shadow TPC member} for ACM IMC & 2019  \\
-% \end{tabular*}\vspace{-10pt}
+\item
 
-% \item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+	\textbf{TPC Member for the Artifact Evaluation} for ACM CoNEXT & 2020  \\
+\end{tabular*}\vspace{-10pt}
 
-% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-% 		\textbf{Occasional Reviewer} for IEEE/ACM ToN and ACM CCR & 2016 - 2020 \\
-% \end{tabular*}\vspace{-10pt}
+\item
 
-% \item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{Shadow TPC member} for ACM IMC & 2019  \\
+\end{tabular*}\vspace{-10pt}
 
-% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-% 		\textbf{CAIDA BGP Hackathon}, San Diego, CA, USA (travel granted) & Feb. 2016\\
-% \end{tabular*}\vspace{-10pt}
+\item
 
-% \item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{Occasional Reviewer} for IEEE/ACM ToN and ACM CCR & 2016 - 2020 \\
+\end{tabular*}\vspace{-10pt}
 
-% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-% 		\textbf{PhD School on Software-defined Networks}, Heracklion, Greece & July 2015\\
-% \end{tabular*}\vspace{-10pt}
+\item
 
-% \item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{CAIDA BGP Hackathon}, San Diego, CA, USA (travel granted) & Feb. 2016\\
+\end{tabular*}\vspace{-10pt}
 
-% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-% 		\textbf{PhD School on Traffic Monitoring and Analysis}, Barcelona, Spain (travel granted) & April 2015\\
-% \end{tabular*}\vspace{-10pt}
+\item
 
-% \item
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{PhD School on Software-defined Networks}, Heracklion, Greece & July 2015\\
+\end{tabular*}\vspace{-10pt}
 
-% \begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
-% 		\textbf{RIPE Atlas Hackathon}, Amsterdam, Netherlands, (travel granted) & March 2015\\
-% \end{tabular*}\vspace{-10pt}
+\item
 
-% \end{itemize}
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{PhD School on Traffic Monitoring and Analysis}, Barcelona, Spain (travel granted) & April 2015\\
+\end{tabular*}\vspace{-10pt}
+
+\item
+
+\begin{tabular*}{6.5in}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+		\textbf{RIPE Atlas Hackathon}, Amsterdam, Netherlands, (travel granted) & March 2015\\
+\end{tabular*}\vspace{-10pt}
+
+\end{itemize}
 
 
 % %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
